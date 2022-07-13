@@ -6,7 +6,7 @@
 /*   By: jpadovan <jpadovan@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/13 19:26:27 by jpadovan          #+#    #+#             */
-/*   Updated: 2022/07/13 19:39:18 by jpadovan         ###   ########.fr       */
+/*   Updated: 2022/07/13 19:55:35 by jpadovan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void	ft_putchar(char c);
 
 void	ft_print_alphabet(void)
 {
-    int x = 'a';
-    while(x <= 'z') {
+	int x = 'a';
+	while(x <= 'z') {
 		ft_putchar(x);
 		x++;
     }
@@ -26,5 +26,5 @@ void	ft_print_alphabet(void)
 
 void	ft_putchar(char c)
 {
-    write(1, &c, 1);
+	write(1, &c, 1);
 }
