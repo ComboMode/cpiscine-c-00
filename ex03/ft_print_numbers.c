@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbellon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/14 17:38:17 by jbellon           #+#    #+#             */
-/*   Updated: 2025/09/15 16:16:07 by jbellon          ###   ########.fr       */
+/*   Created: 2025/09/14 17:45:29 by jbellon           #+#    #+#             */
+/*   Updated: 2025/09/14 17:45:32 by jbellon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,14 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_print_alphabet(void)
+void	ft_print_numbers(void)
 {
-	char	c;
+	char	n;
 
-	c = 'a';
-	while (c <= 'z')
-		ft_putchar(c++);
+	n = '0';
+	while (n <= '9')
+	{
+		ft_putchar(n);
+		n++;
+	}
 }

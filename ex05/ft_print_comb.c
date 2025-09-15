@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbellon <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/14 17:38:17 by jbellon           #+#    #+#             */
-/*   Updated: 2025/09/15 16:16:07 by jbellon          ###   ########.fr       */
+/*   Created: 2025/09/14 17:44:58 by jbellon           #+#    #+#             */
+/*   Updated: 2025/09/14 17:45:01 by jbellon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,31 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_print_alphabet(void)
+void	ft_print_comb(void)
 {
-	char	c;
+	char	i;
+	char	j;
+	char	k;
 
-	c = 'a';
-	while (c <= 'z')
-		ft_putchar(c++);
+	i = '0' - 1;
+	while (++i <= '9')
+	{
+		j = i;
+		while (++j <= '9')
+		{
+			k = j + 1;
+			while (k <= '9')
+			{
+				ft_putchar(i);
+				ft_putchar(j);
+				ft_putchar(k);
+				if (i != '7' || j != '8' || k != '9')
+				{
+					ft_putchar(',');
+					ft_putchar(' ');
+				}
+				k++;
+			}
+		}
+	}
 }
